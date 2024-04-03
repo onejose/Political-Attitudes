@@ -1,0 +1,143 @@
+\documentclass[12pt,english,a4paper,nosumlimits]{article}
+
+
+\makeatletter
+	\def\@fnsymbol#1{\ensuremath{\ifcase#1\or {\alpha}\or \mathsection\or *\or \dagger\or \ddagger\or \mathparagraph\or \|\or **\or \dagger\dagger \or \ddagger\ddagger \else\@ctrerr\fi}}
+\makeatother
+
+\usepackage[left=2.5cm,right=2.5cm,top=3cm,bottom=3cm]{geometry}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage{xcolor}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[font=small, font=bf, justification=justified,format=plain]{caption}
+\usepackage[font=small,justification=justified,format=plain]{subcaption}
+\usepackage[flushleft]{threeparttable}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{lscape}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[round]{natbib}
+\usepackage[colorlinks]{hyperref}
+\usepackage{amsfonts}
+\usepackage{appendix}
+\usepackage{array}
+\usepackage{bbm}
+\usepackage{setspace}
+\usepackage{footnote}
+\usepackage{pdfpages}
+\usepackage{placeins}
+\usepackage{changepage}
+\usepackage{chngcntr}
+\usepackage{fancyhdr}
+\usepackage{framed}
+\usepackage{lipsum}
+\usepackage{multirow} 
+\usepackage{multicol}
+\usepackage{tabu}
+\usepackage{textcomp}
+\usepackage{verbatim}
+\usepackage{physics}
+\usepackage{dsfont}
+\usepackage{siunitx}
+\usepackage{titlesec}
+
+%Commands
+\newcommand\fnote[1]{\captionsetup{justification=raggedright,font=small}\caption*{\textmd{\textit{Note: }#1}}}
+\newcommand\paneltitle[1]{\caption{\textmd{#1}}}
+\newcommand\tikzmark[2]{\tikz[remember picture,baseline,anchor=base] \node (#1) {$#2$};}
+\newcommand{\figtext}[1]{\vspace{-1.9ex}\captionsetup{justification=justified,font=footnotesize}\caption*{\hspace{6pt}\hangindent=1em #1}}
+\newcommand{\fignote}[1]{\figtext{\emph{Note:~}~#1}}
+\newcommand{\figsource}[1]{\figtext{\emph{Source:~}~#1}}
+\newcommand{\starnote}{\figtext{* p $<$ 0.10 ** p $<$ 0.05 *** p $<$ 0.01. }}
+
+%%Measures
+\sisetup{detect-mode, tight-spacing=true, group-digits=false, input-signs= ,input-symbols= ( ) [ ] - + *, input-open-uncertainty= ,input-close-uncertainty= ,table-align-text-post= false}
+\newenvironment{myindentpar}[1]
+{\begin{list}{}%
+ {\setlength{\leftmargin}{#1}}	\item[]}
+{\end{list}}
+
+% Purely aesthetic
+\setlength{\parindent}{3em}
+\numberwithin{equation}{section}
+%\setlength{\parskip}{0.2cm}
+\titleformat*{\paragraph}{\itshape\normalsize}
+
+% Colors
+\definecolor{brightbluead}{RGB}{0,20,80}
+\definecolor{bluead}{RGB}{2,20,48}
+\definecolor{navyad}{RGB}{0,40,82}
+\definecolor{redad}{RGB}{150,0,0}
+\definecolor{greyad}{RGB}{16,16,16}
+\definecolor{yellowad}{RGB}{191,128,64}
+\definecolor{skybluead}{RGB}{0,115,153}
+
+% Color in links
+\hypersetup {
+	pdftitle={Master File},
+	colorlinks=true,
+	citecolor=skybluead,
+	linkcolor=skybluead,
+	urlcolor=skybluead
+}
+
+%******************************************************************************************************************************************************%
+%******************************************************************************************************************************************************%
+\title{\textbf{Title\thanks{I am grateful to .... }}\vspace{3ex}}
+
+\author{
+	Author \\
+ Universidad de los Andes
+} 
+
+
+%******************************************************************************************************************************************************%
+%******************************************************************************************************************************************************%
+\begin{document}
+
+\clearpage
+\maketitle
+\thispagestyle{empty}
+\vspace{-0.15cm}
+\vspace{-1cm}
+
+\begin{abstract}
+\noindent Abstract   \\ \\
+
+
+
+\noindent \textbf{\textit{Keywords:}}... \\
+\noindent \textbf{\textit{Jel Codes:}} ... \\
+\end{abstract}
+
+
+\newpage	
+	\interfootnotelinepenalty=10000
+	\setcounter{page}{1}
+	\onehalfspace
+
+%******************************************************************************************************************************************************%
+%******************************************************************************************************************************************************%
+
+%******************************************************************************************************************************************************%
+\newpage
+
+
+
+\bibliographystyle{plain}
+\bibliography{Project Name/Paper/References}
+
+
+\newpage
+\section{Appendix}
+
+
+\end{document}
