@@ -29,3 +29,18 @@
 
 ### Important changes/branches:
 - None
+
+---
+
+## April 6th, 2024
+### By: EAA
+* Summary: Created & added figures
+
+### Tasks Done:
+
+1. Gathered geographical data of Colombian municipios
+2. Created R script that builds descriptive figures for violence and voting data
+3. Added said figures to the repository
+
+### Important changes/branches:
+- None
